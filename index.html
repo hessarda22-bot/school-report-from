@@ -1,492 +1,126 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl" data-theme="light">
+<!doctype html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>نموذج تقرير برنامج - ثانوية سلطانة بنت عبدالعزيز</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Noto+Naskh+Arabic:wght@500;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تقرير برنامج | ثانوية سلطانة بنت عبدالعزيز</title>
   <style>
-    :root, [data-theme="light"] {
-      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
-      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.05rem);
-      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.45rem);
-      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2rem);
-      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem;
-      --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem;
-      --color-bg: #f4f4f2;
-      --color-surface: #ffffff;
-      --color-surface-2: #f7fbfa;
-      --color-surface-offset: #eef6f5;
-      --color-border: #27327a;
-      --color-divider: #a8c9c7;
-      --color-primary: #1ca7a0;
-      --color-primary-hover: #11857f;
-      --color-text: #18213a;
-      --color-text-muted: #54607c;
-      --color-text-inverse: #ffffff;
-      --color-success: #2c7a4b;
-      --color-warning: #9a6d10;
-      --color-error: #9a2f4a;
-      --radius-sm: 0.5rem; --radius-md: 0.75rem; --radius-lg: 1rem; --radius-xl: 1.25rem; --radius-full: 9999px;
-      --shadow-sm: 0 2px 10px rgba(24,33,58,.06);
-      --shadow-md: 0 10px 28px rgba(24,33,58,.1);
-      --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
-      --font-body: 'Tajawal', sans-serif;
-      --font-display: 'Noto Naskh Arabic', serif;
-      --content-default: 1180px;
-    }
-    [data-theme="dark"] {
-      --color-bg: #131722;
-      --color-surface: #1b2130;
-      --color-surface-2: #1f2738;
-      --color-surface-offset: #232d3f;
-      --color-border: #6f8bff;
-      --color-divider: #3f556c;
-      --color-primary: #4cd0c7;
-      --color-primary-hover: #73ddd5;
-      --color-text: #eef3ff;
-      --color-text-muted: #b8c3dc;
-      --color-text-inverse: #10141f;
-      --shadow-sm: 0 2px 10px rgba(0,0,0,.24);
-      --shadow-md: 0 10px 28px rgba(0,0,0,.38);
-    }
-    *,*::before,*::after{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:var(--font-body);font-size:var(--text-base);background:var(--color-bg);color:var(--color-text);line-height:1.7}
-    img,svg{max-width:100%;display:block}
-    button,input,textarea,select{font:inherit}
-    .container{width:min(calc(100% - 2rem),var(--content-default));margin-inline:auto}
-    .topbar{position:sticky;top:0;z-index:30;background:color-mix(in srgb, var(--color-surface) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid color-mix(in srgb, var(--color-border) 16%, transparent)}
-    .topbar-inner{display:flex;gap:var(--space-4);align-items:center;justify-content:space-between;padding:var(--space-4) 0;flex-wrap:wrap}
-    .brand{display:flex;align-items:center;gap:var(--space-4)}
-    .brand-mark{width:54px;height:54px;border-radius:18px;background:linear-gradient(135deg,var(--color-primary),#6bd4cf);display:grid;place-items:center;box-shadow:var(--shadow-sm)}
-    .brand-mark svg{width:34px;height:34px;color:#fff}
-    .brand h1{margin:0;font-family:var(--font-display);font-size:var(--text-xl);line-height:1.2}
-    .brand p{margin:0;color:var(--color-text-muted);font-size:var(--text-sm)}
-    .actions{display:flex;gap:var(--space-3);flex-wrap:wrap}
-    .btn{border:none;border-radius:var(--radius-full);padding:0.9rem 1.15rem;min-height:44px;display:inline-flex;align-items:center;gap:.55rem;cursor:pointer;transition:transform var(--transition),background var(--transition),color var(--transition),box-shadow var(--transition)}
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:var(--color-primary);color:var(--color-text-inverse);box-shadow:var(--shadow-sm)}
-    .btn-primary:hover{background:var(--color-primary-hover)}
-    .btn-secondary{background:var(--color-surface-offset);color:var(--color-text);border:1px solid color-mix(in srgb, var(--color-border) 18%, transparent)}
-    .hero{padding:var(--space-8) 0 var(--space-6)}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:var(--space-6);align-items:start}
-    .hero-card,.panel,.report-card{background:var(--color-surface);border:2px solid color-mix(in srgb, var(--color-border) 18%, transparent);border-radius:var(--radius-xl);box-shadow:var(--shadow-sm)}
-    .hero-card{padding:var(--space-6)}
-    .hero-title{font-family:var(--font-display);font-size:clamp(2rem,1.2rem + 2vw,2.8rem);line-height:1.3;margin:0 0 var(--space-3)}
-    .hero-desc{margin:0 0 var(--space-5);color:var(--color-text-muted)}
-    .tags{display:flex;gap:var(--space-2);flex-wrap:wrap}
-    .tag{padding:.45rem .85rem;background:var(--color-surface-offset);border-radius:var(--radius-full);font-size:var(--text-sm);border:1px solid color-mix(in srgb, var(--color-primary) 22%, transparent)}
-    .meta-list{display:grid;gap:var(--space-3);padding:var(--space-5)}
-    .meta-item{display:flex;justify-content:space-between;gap:var(--space-4);padding-bottom:var(--space-3);border-bottom:1px dashed color-mix(in srgb, var(--color-border) 20%, transparent)}
-    .meta-item:last-child{border-bottom:none;padding-bottom:0}
-    .meta-item strong{font-size:var(--text-sm)}
-    .meta-item span{color:var(--color-text-muted)}
-    .layout{padding-bottom:var(--space-10)}
-    .main-grid{display:grid;grid-template-columns:320px 1fr;gap:var(--space-6);align-items:start}
-    .sidebar{position:sticky;top:100px;display:grid;gap:var(--space-4)}
-    .panel{padding:var(--space-5)}
-    .panel h2{margin:0 0 var(--space-3);font-size:var(--text-lg)}
-    .panel p{margin:0;color:var(--color-text-muted)}
-    .steps{display:grid;gap:var(--space-3);padding:0;margin:0;list-style:none}
-    .steps li{display:flex;gap:var(--space-3);align-items:flex-start;background:var(--color-surface-2);padding:var(--space-3);border-radius:var(--radius-lg)}
-    .step-num{flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--color-primary);color:var(--color-text-inverse);font-weight:800}
-    .report-card{overflow:hidden}
-    .section-head{padding:var(--space-5);border-bottom:1px solid color-mix(in srgb, var(--color-border) 16%, transparent);display:flex;justify-content:space-between;align-items:center;gap:var(--space-3);flex-wrap:wrap}
-    .section-head h2{margin:0;font-size:var(--text-lg)}
-    .section-head p{margin:0;color:var(--color-text-muted);font-size:var(--text-sm)}
-    .report-body{padding:var(--space-5);display:grid;gap:var(--space-5)}
-    .school-header{display:grid;place-items:center;text-align:center;gap:var(--space-2);padding:var(--space-5);background:linear-gradient(180deg,var(--color-surface-2),transparent)}
-    .school-header .ministry{font-family:var(--font-display);font-size:1.8rem;color:var(--color-primary);margin:0}
-    .school-header .sub{margin:0;color:var(--color-text-muted)}
-    .school-header .year{font-weight:700;color:var(--color-border)}
-    .form-section{display:grid;gap:var(--space-4)}
-    .section-title{display:flex;align-items:center;gap:var(--space-3);font-weight:800;font-size:var(--text-lg);color:var(--color-border)}
-    .section-title::before{content:"";width:8px;height:30px;border-radius:999px;background:var(--color-primary)}
-    .grid-2,.grid-3,.grid-4{display:grid;gap:var(--space-4)}
-    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
-    .field{display:grid;gap:var(--space-2)}
-    .field label{font-weight:700;font-size:var(--text-sm)}
-    .field input,.field textarea,.field select{width:100%;background:var(--color-surface-2);border:1.5px solid color-mix(in srgb, var(--color-border) 18%, transparent);border-radius:var(--radius-md);padding:.95rem 1rem;color:var(--color-text);outline:none;transition:border-color var(--transition),box-shadow var(--transition),background var(--transition)}
-    .field textarea{min-height:130px;resize:vertical}
-    .field input:focus,.field textarea:focus,.field select:focus{border-color:var(--color-primary);box-shadow:0 0 0 4px color-mix(in srgb, var(--color-primary) 18%, transparent);background:var(--color-surface)}
-    .hint{font-size:var(--text-xs);color:var(--color-text-muted)}
-    .split-box{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
-    .time-row{display:grid;grid-template-columns:2fr 1fr 1fr;gap:var(--space-4)}
-    .evidence-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4)}
-    .photo-card{border:1.5px dashed color-mix(in srgb, var(--color-border) 26%, transparent);border-radius:var(--radius-lg);padding:var(--space-4);background:var(--color-surface-2);display:grid;gap:var(--space-3)}
-    .photo-preview{aspect-ratio:4/3;border-radius:var(--radius-md);background:linear-gradient(135deg,color-mix(in srgb,var(--color-primary) 10%, transparent),color-mix(in srgb,var(--color-border) 10%, transparent));border:1px solid color-mix(in srgb, var(--color-border) 18%, transparent);display:grid;place-items:center;color:var(--color-text-muted);overflow:hidden}
-    .photo-preview img{width:100%;height:100%;object-fit:cover}
-    .signature-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:var(--space-4)}
-    .readonly{background:color-mix(in srgb, var(--color-primary) 6%, var(--color-surface-2)) !important;font-weight:700}
-    .toolbar{display:flex;gap:var(--space-3);flex-wrap:wrap;justify-content:flex-end;padding-top:var(--space-2)}
-    .status{font-size:var(--text-sm);color:var(--color-success);font-weight:700;min-height:1.4em}
-    .footer-note{padding:0 var(--space-5) var(--space-5);color:var(--color-text-muted);font-size:var(--text-sm)}
-    @media (max-width: 1024px){
-      .hero-grid,.main-grid{grid-template-columns:1fr}
-      .sidebar{position:static}
-    }
-    @media (max-width: 760px){
-      .grid-2,.grid-3,.grid-4,.split-box,.time-row,.evidence-grid,.signature-grid{grid-template-columns:1fr}
-      .topbar-inner,.section-head{align-items:flex-start}
-      .brand{align-items:flex-start}
-    }
-    @media print{
-      .topbar,.sidebar,.toolbar,.footer-note{display:none !important}
-      body{background:#fff}
-      .container{width:100%}
-      .report-card{box-shadow:none;border:none}
-      .report-body{padding:0}
-      .form-section{break-inside:avoid}
-    }
+    @page { size: A4 portrait; margin: 0; }
+    :root { --navy:#2a2d72; --teal:#139c92; --pale:#def4f1; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:#e7eaee; font-family:Tahoma, Arial, sans-serif; color:#18204f; }
+    .toolbar { position:sticky; top:0; z-index:20; display:flex; justify-content:center; gap:9px; flex-wrap:wrap; padding:11px; background:#fff; border-bottom:1px solid #d8dce2; }
+    button { border:0; border-radius:8px; background:#128e85; color:#fff; padding:10px 16px; font:inherit; cursor:pointer; }
+    button.secondary { background:#4b5563; }
+    .page { width:210mm; height:297mm; margin:12px auto; position:relative; overflow:hidden; background:#fff; box-shadow:0 8px 26px rgba(0,0,0,.14); print-color-adjust:exact; -webkit-print-color-adjust:exact; }
+    .background { position:absolute; inset:0; width:100%; height:100%; object-fit:fill; z-index:0; pointer-events:none; }
+    .content { position:absolute; inset:0; z-index:1; padding:34mm 16mm 19mm; }
+    h1 { margin:0 0 4mm; text-align:center; color:var(--teal); font-size:16.5pt; }
+    .section { margin:3mm 0 1.5mm; font-size:12.2pt; font-weight:bold; color:var(--navy); }
+    table { width:100%; table-layout:fixed; border-collapse:collapse; margin-bottom:3mm; background:rgba(255,255,255,.86); }
+    td { border:1.1px solid var(--navy); padding:3px 5px; font-size:8.9pt; vertical-align:middle; line-height:1.25; }
+    td.label { text-align:center; font-weight:bold; color:var(--teal); background:rgba(218,244,241,.95); }
+    input[type=text], textarea { width:100%; border:0; outline:0; resize:none; color:#111827; background:transparent; font:inherit; line-height:1.35; padding:0; }
+    textarea.objective { min-height:11mm; } textarea.detail { min-height:14mm; } textarea.program { min-height:21mm; } textarea.note { min-height:14mm; }
+    .evidence-title { color:#111; font-size:8.6pt; font-weight:bold; text-align:center; margin:2mm 0 1.5mm; }
+    .evidence { display:grid; grid-template-columns:1fr 1fr; gap:3.5mm 6mm; }
+    .e-card { border:1.1px solid var(--navy); background:rgba(255,255,255,.86); overflow:hidden; }
+    .e-card h3 { margin:0; padding:3px; text-align:center; background:rgba(218,244,241,.95); color:var(--teal); font-size:9pt; border-bottom:1.1px solid var(--navy); }
+    .preview { height:23mm; position:relative; display:flex; align-items:center; justify-content:center; overflow:hidden; background:rgba(255,255,255,.6); }
+    .preview img { width:100%; height:100%; object-fit:contain; display:none; }
+    .placeholder { color:#64748b; font-size:8pt; text-align:center; }
+    .upload { padding:2px 4px; border-top:1px dashed #aab5c2; background:#fff; }
+    .upload input { width:100%; font-size:7.5pt; }
+    .caption { border-top:1.1px solid var(--navy); padding:3px 5px; background:rgba(218,244,241,.95); }
+    .caption input { text-align:center; font-size:8pt; }
+    .signatures { margin-top:3mm; }
+    .signatures td { height:7.2mm; }
+    .signature-image { height:15mm; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+    .signature-image img { max-width:100%; max-height:100%; object-fit:contain; display:none; }
+    .stamp { height:15mm; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+    .stamp img { max-width:100%; max-height:100%; object-fit:contain; display:none; }
+    .small-upload { font-size:7pt; width:100%; }
+    .footer-name { margin-top:2mm; text-align:center; font-size:8.5pt; color:#111; font-weight:bold; }
+    @media print { body { background:#fff; } .toolbar { display:none; } .page { margin:0; box-shadow:none; } .upload, .small-upload { display:none !important; } .placeholder { display:none !important; } }
+    @media (max-width:800px) { .page { transform:scale(.72); transform-origin:top center; margin-bottom:-81mm; } .toolbar { position:static; } }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand">
-        <div class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="شعار المدرسة">
-            <path d="M10 44C18 36 24 32 32 32C40 32 46 36 54 44" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-            <path d="M18 28C22 23 27 20 32 20C37 20 42 23 46 28" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-            <path d="M28 14H36" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-            <circle cx="32" cy="12" r="2.5" fill="currentColor"/>
-            <path d="M16 48H48" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div>
-          <h1>تقرير برنامج المدرسة</h1>
-          <p>ثانوية سلطانة بنت عبدالعزيز • العام الهجري 1448 - 1449</p>
-        </div>
+  <div class="toolbar">
+    <button onclick="window.print()">حفظ التقرير PDF</button>
+    <button class="secondary" onclick="clearAll()">مسح البيانات</button>
+  </div>
+
+  <main class="page">
+    <img class="background" src="1000654586.jpg" alt="خلفية ثانوية سلطانة بنت عبدالعزيز">
+    <section class="content">
+      <h1>تقرير برنامج</h1>
+
+      <div class="section">أولاً: معلومات عامة عن البرنامج:</div>
+      <table>
+        <tr><td class="label">اسم المشروع / البرنامج</td><td><input type="text"></td><td class="label">المجال / المسار</td><td><input type="text"></td></tr>
+        <tr><td class="label">اليوم / التاريخ</td><td><input type="text"></td><td class="label">مسؤولة التنفيذ</td><td><input type="text"></td></tr>
+        <tr><td class="label">الفئة المستهدفة</td><td><input type="text"></td><td class="label">عدد المستفيدين</td><td><input type="text"></td></tr>
+      </table>
+
+      <div class="section">ثانياً: أهداف المشروع / البرنامج:</div>
+      <table>
+        <tr><td class="label" style="width:20%">الهدف العام</td><td><textarea class="objective"></textarea></td></tr>
+        <tr><td class="label">الأهداف التفصيلية</td><td><textarea class="detail"></textarea></td></tr>
+      </table>
+
+      <div class="section">ثالثاً: وصف البرنامج:</div>
+      <table>
+        <tr><td class="label" style="width:39%">وصف البرنامج</td><td class="label" style="width:8%">من</td><td class="label" style="width:8%">إلى</td><td class="label" style="width:45%">المخرج النهائي للبرنامج</td></tr>
+        <tr><td><textarea class="program"></textarea></td><td><input type="text"></td><td><input type="text"></td><td><textarea class="program"></textarea></td></tr>
+      </table>
+      <table>
+        <tr><td class="label">إيجابيات المشروع / البرنامج</td><td class="label">فرص التحسين</td></tr>
+        <tr><td><textarea class="note"></textarea></td><td><textarea class="note"></textarea></td></tr>
+      </table>
+
+      <div class="section">شواهد الإنجاز:</div>
+      <div class="evidence-title">صور تنفيذ البرنامج – نماذج للمطويات – شهادة الشكر للبرنامج – موافقات أولياء الأمور – آراء المشاركين بالبرنامج</div>
+      <div class="evidence">
+        <div class="e-card"><h3>الصورة الأولى</h3><div class="preview"><span id="p1" class="placeholder">اختاري الصورة الأولى</span><img id="i1" alt="الشاهد الأول"></div><div class="upload"><input type="file" accept="image/*" onchange="showImage(event,'i1','p1')"></div><div class="caption"><input type="text" placeholder="موضوع الصورة"></div></div>
+        <div class="e-card"><h3>الصورة الثانية</h3><div class="preview"><span id="p2" class="placeholder">اختاري الصورة الثانية</span><img id="i2" alt="الشاهد الثاني"></div><div class="upload"><input type="file" accept="image/*" onchange="showImage(event,'i2','p2')"></div><div class="caption"><input type="text" placeholder="موضوع الصورة"></div></div>
+        <div class="e-card"><h3>الصورة الثالثة</h3><div class="preview"><span id="p3" class="placeholder">اختاري الصورة الثالثة</span><img id="i3" alt="الشاهد الثالث"></div><div class="upload"><input type="file" accept="image/*" onchange="showImage(event,'i3','p3')"></div><div class="caption"><input type="text" placeholder="موضوع الصورة"></div></div>
+        <div class="e-card"><h3>الصورة الرابعة</h3><div class="preview"><span id="p4" class="placeholder">اختاري الصورة الرابعة</span><img id="i4" alt="الشاهد الرابع"></div><div class="upload"><input type="file" accept="image/*" onchange="showImage(event,'i4','p4')"></div><div class="caption"><input type="text" placeholder="موضوع الصورة"></div></div>
       </div>
-      <div class="actions">
-        <button class="btn btn-secondary" type="button" data-theme-toggle aria-label="تبديل المظهر">🌙</button>
-        <button class="btn btn-secondary" type="button" id="clearForm">مسح النموذج</button>
-        <button class="btn btn-primary" type="button" id="printForm">طباعة / PDF</button>
-      </div>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-card">
-          <h2 class="hero-title">نموذج رقمي دقيق لتعبئة تقارير البرامج والأنشطة المدرسية</h2>
-          <p class="hero-desc">هذا الكود مصمم ليوضع داخل صفحة مخصصة في Google Sites عبر التضمين، ويحتوي على جميع الحقول الظاهرة في التقرير المرفق مع تبسيط الإدخال، رفع الصور، وتجهيز الطباعة النهائية بشكل منظم وواضح.</p>
-          <div class="tags">
-            <span class="tag">خاص بمدرستنا فقط</span>
-            <span class="tag">سهولة تعبئة الخانات</span>
-            <span class="tag">مطابق لمحتوى التقرير</span>
-            <span class="tag">جاهز للطباعة</span>
-          </div>
-        </div>
-        <aside class="hero-card meta-list">
-          <div class="meta-item"><strong>اسم المدرسة</strong><span>ثانوية سلطانة بنت عبدالعزيز</span></div>
-          <div class="meta-item"><strong>الإدارة التعليمية</strong><span>الإدارة العامة للتعليم بمحافظة الطائف</span></div>
-          <div class="meta-item"><strong>الجهة</strong><span>وزارة التعليم</span></div>
-          <div class="meta-item"><strong>العام الهجري</strong><span>1448 - 1449</span></div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="layout">
-      <div class="container main-grid">
-        <aside class="sidebar">
-          <div class="panel">
-            <h2>طريقة الاستخدام</h2>
-            <ul class="steps">
-              <li><span class="step-num">1</span><div>املئي بيانات البرنامج العامة مثل اسم المشروع، المجال، اليوم، والتاريخ.</div></li>
-              <li><span class="step-num">2</span><div>اكتبي الهدف العام والأهداف التفصيلية ووصف التنفيذ والنتائج.</div></li>
-              <li><span class="step-num">3</span><div>ارفعي صور الشواهد، ثم اطبعي النموذج مباشرة أو احفظيه PDF.</div></li>
-            </ul>
-          </div>
-          <div class="panel">
-            <h2>مهم في Google Sites</h2>
-            <p>الأفضل رفع هذا الملف كصفحة HTML مستقلة أو على استضافة ثم إدراجها داخل Google Sites عبر Embed. الكود نفسه يعمل كصفحة ويب كاملة.</p>
-          </div>
-        </aside>
-
-        <section class="report-card">
-          <div class="school-header">
-            <div class="ministry">تقرير برنامج</div>
-            <p class="sub">وزارة التعليم • الإدارة العامة للتعليم بمحافظة الطائف</p>
-            <p class="sub"><strong>ثانوية سلطانة بنت عبدالعزيز</strong></p>
-            <p class="year">العام الهجري 1448 - 1449</p>
-          </div>
-
-          <div class="section-head">
-            <div>
-              <h2>نموذج تعبئة التقرير</h2>
-              <p>جميع الحقول التالية مبنية على محتوى الملف المرفق بالكامل.</p>
-            </div>
-            <div class="status" id="saveStatus">تم تثبيت بيانات المدرسة والجهات الرسمية.</div>
-          </div>
-
-          <form class="report-body" id="reportForm">
-            <section class="form-section">
-              <div class="section-title">أولًا: معلومات عامة عن البرنامج</div>
-              <div class="grid-2">
-                <div class="field">
-                  <label for="projectName">اسم المشروع / البرنامج</label>
-                  <input id="projectName" name="projectName" type="text" placeholder="اكتبي اسم المشروع أو البرنامج" required />
-                </div>
-                <div class="field">
-                  <label for="track">المجال / المسار / البرنامج</label>
-                  <input id="track" name="track" type="text" placeholder="مثال: نشاط طلابي - توعوي - مهاري" />
-                </div>
-              </div>
-              <div class="grid-3">
-                <div class="field">
-                  <label for="day">اليوم</label>
-                  <input id="day" name="day" type="text" placeholder="مثال: الاثنين" />
-                </div>
-                <div class="field">
-                  <label for="date">التاريخ</label>
-                  <input id="date" name="date" type="text" placeholder="هجري / ميلادي حسب الحاجة" />
-                </div>
-                <div class="field">
-                  <label for="executor">مسؤولة التنفيذ</label>
-                  <input id="executor" name="executor" type="text" placeholder="اسم مسؤولة التنفيذ" />
-                </div>
-              </div>
-              <div class="grid-2">
-                <div class="field">
-                  <label for="targetGroup">الفئة المستهدفة</label>
-                  <input id="targetGroup" name="targetGroup" type="text" placeholder="مثال: طالبات الصف الأول الثانوي" />
-                </div>
-                <div class="field">
-                  <label for="beneficiaries">عدد المستفيدين</label>
-                  <input id="beneficiaries" name="beneficiaries" type="number" min="0" placeholder="أدخلي العدد" />
-                </div>
-              </div>
-            </section>
-
-            <section class="form-section">
-              <div class="section-title">ثانيًا: أهداف المشروع / البرنامج</div>
-              <div class="field">
-                <label for="generalGoal">الهدف العام</label>
-                <textarea id="generalGoal" name="generalGoal" placeholder="اكتبي الهدف العام للبرنامج"></textarea>
-              </div>
-              <div class="field">
-                <label for="detailedGoals">الأهداف التفصيلية</label>
-                <textarea id="detailedGoals" name="detailedGoals" placeholder="ضعي الأهداف التفصيلية، ويمكن كتابة كل هدف في سطر مستقل"></textarea>
-                <div class="hint">يفضل استخدام أسطر قصيرة وواضحة لتسهيل الطباعة.</div>
-              </div>
-            </section>
-
-            <section class="form-section">
-              <div class="section-title">ثالثًا: وصف البرنامج</div>
-              <div class="time-row">
-                <div class="field">
-                  <label for="programDescription">وصف البرنامج</label>
-                  <textarea id="programDescription" name="programDescription" placeholder="اشرحي فكرة التنفيذ، الفقرات، والأدوات المستخدمة"></textarea>
-                </div>
-                <div class="field">
-                  <label for="timeFrom">وقت التنفيذ من</label>
-                  <input id="timeFrom" name="timeFrom" type="time" />
-                </div>
-                <div class="field">
-                  <label for="timeTo">إلى</label>
-                  <input id="timeTo" name="timeTo" type="time" />
-                </div>
-              </div>
-              <div class="grid-2">
-                <div class="field">
-                  <label for="finalOutput">المخرج النهائي للبرنامج</label>
-                  <textarea id="finalOutput" name="finalOutput" placeholder="مثال: منتج طلابي، عرض، مطوية، حملة، مسابقة"></textarea>
-                </div>
-                <div class="field">
-                  <label for="positives">إيجابيات المشروع / البرنامج</label>
-                  <textarea id="positives" name="positives" placeholder="اذكري الجوانب الإيجابية وأثر البرنامج"></textarea>
-                </div>
-              </div>
-              <div class="field">
-                <label for="improvements">فرص التحسين</label>
-                <textarea id="improvements" name="improvements" placeholder="ما الجوانب التي يمكن تطويرها مستقبلًا؟"></textarea>
-              </div>
-            </section>
-
-            <section class="form-section">
-              <div class="section-title">شواهد الإنجاز</div>
-              <div class="hint">صورتنفيذ البرنامج – نماذج للمطويات – شهادة الشكر – موافقات أولياء الأمور – آراء المشاركين بالبرنامج.</div>
-              <div class="evidence-grid">
-                <div class="photo-card">
-                  <div class="photo-preview" id="preview1">الصورة الأولى</div>
-                  <div class="field"><label for="image1">رفع الصورة الأولى</label><input id="image1" type="file" accept="image/*" /></div>
-                  <div class="field"><label for="caption1">موضوع الصورة</label><input id="caption1" name="caption1" type="text" placeholder="اكتبي وصف الصورة الأولى" /></div>
-                </div>
-                <div class="photo-card">
-                  <div class="photo-preview" id="preview2">الصورة الثانية</div>
-                  <div class="field"><label for="image2">رفع الصورة الثانية</label><input id="image2" type="file" accept="image/*" /></div>
-                  <div class="field"><label for="caption2">موضوع الصورة</label><input id="caption2" name="caption2" type="text" placeholder="اكتبي وصف الصورة الثانية" /></div>
-                </div>
-                <div class="photo-card">
-                  <div class="photo-preview" id="preview3">الصورة الثالثة</div>
-                  <div class="field"><label for="image3">رفع الصورة الثالثة</label><input id="image3" type="file" accept="image/*" /></div>
-                  <div class="field"><label for="caption3">موضوع الصورة</label><input id="caption3" name="caption3" type="text" placeholder="اكتبي وصف الصورة الثالثة" /></div>
-                </div>
-                <div class="photo-card">
-                  <div class="photo-preview" id="preview4">الصورة الرابعة</div>
-                  <div class="field"><label for="image4">رفع الصورة الرابعة</label><input id="image4" type="file" accept="image/*" /></div>
-                  <div class="field"><label for="caption4">موضوع الصورة</label><input id="caption4" name="caption4" type="text" placeholder="اكتبي وصف الصورة الرابعة" /></div>
-                </div>
-              </div>
-            </section>
-
-            <section class="form-section">
-              <div class="section-title">اعتماد التقرير</div>
-              <div class="signature-grid">
-                <div class="field">
-                  <label for="preparedBy">معدة التقرير</label>
-                  <input id="preparedBy" name="preparedBy" type="text" value="نسرين محمد الغامدي" />
-                </div>
-                <div class="field">
-                  <label for="schoolName">اسم المدرسة</label>
-                  <input id="schoolName" name="schoolName" class="readonly" type="text" value="ثانوية سلطانة بنت عبدالعزيز" readonly />
-                </div>
-                <div class="field">
-                  <label for="principalName">مديرة المدرسة</label>
-                  <input id="principalName" name="principalName" type="text" value="نسرين محمد الغامدي" />
-                </div>
-                <div class="field">
-                  <label for="signaturePrepared">التوقيع</label>
-                  <input id="signaturePrepared" name="signaturePrepared" type="text" placeholder="اسم أو رمز التوقيع" />
-                </div>
-                <div class="field">
-                  <label for="seal">الختم</label>
-                  <input id="seal" name="seal" type="text" placeholder="تم الختم / ختم المدرسة" />
-                </div>
-                <div class="field">
-                  <label for="signaturePrincipal">التوقيع</label>
-                  <input id="signaturePrincipal" name="signaturePrincipal" type="text" placeholder="توقيع المديرة" />
-                </div>
-              </div>
-              <div class="grid-2">
-                <div class="field">
-                  <label for="activityLeader">رائدة النشاط الطالبي</label>
-                  <input id="activityLeader" name="activityLeader" type="text" value="حصه الحارثي" />
-                </div>
-                <div class="field">
-                  <label for="hijriYear">العام الهجري</label>
-                  <input id="hijriYear" name="hijriYear" class="readonly" type="text" value="1448 - 1449" readonly />
-                </div>
-              </div>
-            </section>
-
-            <div class="toolbar">
-              <button class="btn btn-secondary" type="button" id="fillDemo">تعبئة تجريبية</button>
-              <button class="btn btn-primary" type="submit">تأكيد اكتمال البيانات</button>
-            </div>
-          </form>
-          <div class="footer-note">هذا النموذج مخصص لثانوية سلطانة بنت عبدالعزيز، وتم تثبيت اسم المدرسة والعام الهجري داخل النموذج.</div>
-        </section>
-      </div>
+      <table class="signatures">
+        <tr><td class="label">معدة التقرير</td><td><input type="text" value="حصه الحارثي"></td><td class="label">اسم المدرسة</td><td><input type="text" value="ثانوية سلطانة بنت عبدالعزيز"></td></tr>
+        <tr><td class="label">توقيع معدة التقرير</td><td><div class="signature-image"><span id="sp1" class="placeholder">ارفعي صورة التوقيع</span><img id="si1" alt="توقيع معدة التقرير"></div><input class="small-upload" type="file" accept="image/*" onchange="showImage(event,'si1','sp1')"></td><td class="label">توقيع مديرة المدرسة</td><td><div class="signature-image"><span id="sp2" class="placeholder">ارفعي صورة التوقيع</span><img id="si2" alt="توقيع مديرة المدرسة"></div><input class="small-upload" type="file" accept="image/*" onchange="showImage(event,'si2','sp2')"></td></tr>
+        <tr><td class="label">الختم</td><td><div class="stamp"><span id="sp3" class="placeholder">ارفعي صورة الختم</span><img id="si3" alt="ختم المدرسة"></div><input class="small-upload" type="file" accept="image/*" onchange="showImage(event,'si3','sp3')"></td><td class="label">مديرة المدرسة</td><td><input type="text" value="نسرين محمد الغامدي"></td></tr>
+      </table>
+      <div class="footer-name">رائدة النشاط الطلابي: حصه الحارثي</div>
     </section>
   </main>
 
-  <script>
-    const html = document.documentElement;
-    const toggleBtn = document.querySelector('[data-theme-toggle]');
-    let currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    html.setAttribute('data-theme', currentTheme);
-    toggleBtn.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
-    toggleBtn.addEventListener('click', () => {
-      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', currentTheme);
-      toggleBtn.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
-    });
-
-    const statusBox = document.getElementById('saveStatus');
-    const form = document.getElementById('reportForm');
-    const setStatus = (msg, tone='success') => {
-      statusBox.textContent = msg;
-      statusBox.style.color = tone === 'error' ? 'var(--color-error)' : tone === 'warn' ? 'var(--color-warning)' : 'var(--color-success)';
+<script>
+  function showImage(event, imageId, placeholderId) {
+    const file = event.target.files && event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const image = document.getElementById(imageId);
+      const placeholder = document.getElementById(placeholderId);
+      image.src = e.target.result;
+      image.style.display = 'block';
+      placeholder.style.display = 'none';
     };
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const project = document.getElementById('projectName').value.trim();
-      if (!project) {
-        setStatus('يرجى كتابة اسم المشروع أو البرنامج أولًا.', 'error');
-        document.getElementById('projectName').focus();
-        return;
-      }
-      setStatus('تم التأكد من اكتمال البيانات الأساسية للتقرير. يمكنك الآن الطباعة أو الحفظ كملف PDF.');
+    reader.readAsDataURL(file);
+  }
+  function clearAll() {
+    document.querySelectorAll('input[type=text], textarea').forEach(function(el) {
+      el.value = el.defaultValue || '';
     });
-
-    document.getElementById('printForm').addEventListener('click', () => window.print());
-
-    document.getElementById('clearForm').addEventListener('click', () => {
-      if (!confirm('هل تريدين مسح البيانات المدخلة؟')) return;
-      form.reset();
-      ['preview1','preview2','preview3','preview4'].forEach((id, idx) => {
-        const names = ['الصورة الأولى','الصورة الثانية','الصورة الثالثة','الصورة الرابعة'];
-        const box = document.getElementById(id);
-        box.innerHTML = names[idx];
-      });
-      document.getElementById('schoolName').value = 'ثانوية سلطانة بنت عبدالعزيز';
-      document.getElementById('hijriYear').value = '1448 - 1449';
-      document.getElementById('preparedBy').value = 'نسرين محمد الغامدي';
-      document.getElementById('principalName').value = 'نسرين محمد الغامدي';
-      document.getElementById('activityLeader').value = 'حصه الحارثي';
-      setStatus('تم مسح الحقول القابلة للتعديل مع الإبقاء على بيانات المدرسة الثابتة.', 'warn');
+    document.querySelectorAll('input[type=file]').forEach(function(el) { el.value = ''; });
+    document.querySelectorAll('img[id]').forEach(function(img) {
+      if (img.id !== '') { img.src = ''; img.style.display = 'none'; }
     });
-
-    document.getElementById('fillDemo').addEventListener('click', () => {
-      const sample = {
-        projectName: 'برنامج تعزيز الانضباط المدرسي',
-        track: 'المجال السلوكي والتوعوي',
-        day: 'الأحد',
-        date: '1448/02/15هـ',
-        executor: 'رائدة النشاط الطالبي',
-        targetGroup: 'طالبات المرحلة الثانوية',
-        beneficiaries: '120',
-        generalGoal: 'تعزيز السلوك الإيجابي ورفع مستوى الانضباط المدرسي بين الطالبات.',
-        detailedGoals: 'غرس قيمة الالتزام بالأنظمة المدرسية.\nرفع الوعي بأهمية الحضور المبكر.\nتعزيز المسؤولية الفردية والجماعية.',
-        programDescription: 'تم تنفيذ برنامج توعوي تفاعلي تضمن عرضًا مرئيًا، ومناقشة جماعية، ومسابقات قصيرة، وتوزيع مطويات إرشادية على الطالبات.',
-        timeFrom: '09:00',
-        timeTo: '10:30',
-        finalOutput: 'مطويات ورسائل توعوية وتعهدات سلوكية إيجابية.',
-        positives: 'تفاعل ملحوظ من الطالبات، وتحسن في فهم الأنظمة، وارتفاع الدافعية للمشاركة.',
-        improvements: 'زيادة مدة التنفيذ، وإضافة مشاركة أولياء الأمور، وتكرار البرنامج على فترات متقاربة.',
-        caption1: 'إلقاء مقدمة البرنامج داخل القاعة',
-        caption2: 'مشاركة الطالبات في النقاش',
-        caption3: 'عرض المطويات والشواهد',
-        caption4: 'النتائج النهائية للبرنامج',
-        signaturePrepared: 'نسرين',
-        seal: 'ختم المدرسة',
-        signaturePrincipal: 'نسرين',
-      };
-      Object.entries(sample).forEach(([key, value]) => {
-        const el = document.getElementById(key);
-        if (el) el.value = value;
-      });
-      setStatus('تمت تعبئة نموذج تجريبي لمساعدتك في معاينة الشكل النهائي.');
-    });
-
-    function bindImageInput(inputId, previewId) {
-      const input = document.getElementById(inputId);
-      const preview = document.getElementById(previewId);
-      input.addEventListener('change', () => {
-        const file = input.files && input.files[0];
-        if (!file) return;
-        const reader = new FileReader();
-        reader.onload = e => {
-          preview.innerHTML = `<img src="${e.target.result}" alt="معاينة الصورة المرفوعة" />`;
-          setStatus('تم رفع صورة من شواهد الإنجاز بنجاح.');
-        };
-        reader.readAsDataURL(file);
-      });
-    }
-    bindImageInput('image1','preview1');
-    bindImageInput('image2','preview2');
-    bindImageInput('image3','preview3');
-    bindImageInput('image4','preview4');
-  </script>
+    document.querySelectorAll('.placeholder').forEach(function(el) { el.style.display = 'block'; });
+  }
+</script>
 </body>
 </html>
