@@ -1,122 +1,41 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>تقرير برنامج | ثانوية سلطانة بنت عبدالعزيز</title>
-  <style>
-    @page { size:A4 portrait; margin:0; }
-    :root { --navy:#2a2d72; --teal:#139c92; --pale:#def4f1; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:#e7eaee; font-family:Tahoma,Arial,sans-serif; color:#18204f; }
-    .toolbar { position:sticky; top:0; z-index:20; display:flex; justify-content:center; gap:9px; flex-wrap:wrap; padding:11px; background:#fff; border-bottom:1px solid #d8dce2; }
-    button { border:0; border-radius:8px; background:#128e85; color:#fff; padding:10px 16px; font:inherit; cursor:pointer; }
-    button.secondary { background:#4b5563; }
-    .page { width:210mm; height:297mm; margin:12px auto; position:relative; overflow:hidden; background:#fff; box-shadow:0 8px 26px rgba(0,0,0,.14); print-color-adjust:exact; -webkit-print-color-adjust:exact; }
-    .background { position:absolute; inset:0; width:100%; height:100%; object-fit:fill; z-index:0; pointer-events:none; }
-    .content { position:absolute; inset:0; z-index:1; padding:34mm 16mm 19mm; }
-    h1 { margin:0 0 5mm; text-align:center; color:var(--teal); font-size:17pt; }
-    .section { margin:4mm 0 2mm; font-size:13pt; font-weight:bold; color:var(--navy); }
-    table { width:100%; table-layout:fixed; border-collapse:collapse; margin-bottom:4mm; background:rgba(255,255,255,.88); }
-    td { border:1.1px solid var(--navy); padding:4px 6px; font-size:10pt; vertical-align:middle; line-height:1.35; }
-    td.label { text-align:center; font-weight:bold; color:var(--teal); background:rgba(218,244,241,.96); }
-    input[type=text], textarea { width:100%; border:0; outline:0; resize:none; color:#111827; background:transparent; font:inherit; line-height:1.45; padding:0; }
-    textarea.objective { min-height:18mm; } textarea.detail { min-height:32mm; } textarea.program { min-height:42mm; } textarea.note { min-height:28mm; }
-    .evidence-intro { font-size:11pt; color:#111; font-weight:bold; text-align:center; margin:3mm 0 4mm; }
-    .evidence { display:grid; grid-template-columns:1fr 1fr; gap:7mm 8mm; }
-    .e-card { border:1.1px solid var(--navy); background:rgba(255,255,255,.88); overflow:hidden; }
-    .e-card h3 { margin:0; padding:5px; text-align:center; background:rgba(218,244,241,.96); color:var(--teal); font-size:12pt; border-bottom:1.1px solid var(--navy); }
-    .preview { height:72mm; position:relative; display:flex; align-items:center; justify-content:center; overflow:hidden; background:rgba(255,255,255,.6); }
-    .preview img { width:100%; height:100%; object-fit:contain; display:none; }
-    .placeholder { color:#64748b; font-size:10pt; text-align:center; }
-    .upload { padding:4px 6px; border-top:1px dashed #aab5c2; background:#fff; }
-    .upload input { width:100%; font-size:9pt; }
-    .caption { border-top:1.1px solid var(--navy); padding:5px 6px; background:rgba(218,244,241,.96); }
-    .caption input { text-align:center; font-size:10pt; }
-    .signatures { margin-top:7mm; }
-    .signatures td { height:12mm; }
-    .signature-image { height:25mm; display:flex; align-items:center; justify-content:center; overflow:hidden; }
-    .signature-image img,.stamp img { max-width:100%; max-height:100%; object-fit:contain; display:none; }
-    .stamp { height:25mm; display:flex; align-items:center; justify-content:center; overflow:hidden; }
-    .small-upload { width:100%; font-size:8.5pt; }
-    .footer-name { margin-top:5mm; text-align:center; font-size:11pt; color:#111; font-weight:bold; }
-    @media print { body{background:#fff}.toolbar{display:none}.page{margin:0;box-shadow:none;page-break-after:always}.page:last-of-type{page-break-after:auto}.upload,.small-upload{display:none!important}.placeholder{display:none!important} }
-    @media(max-width:800px){ .page{transform:scale(.72);transform-origin:top center;margin-bottom:-81mm}.toolbar{position:static} }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>تقرير برنامج</title>
+<style>
+@page{size:A4 portrait;margin:0}
+:root{--navy:#2a2d72;--teal:#139c92;--pale:#def4f1}
+*{box-sizing:border-box}body{margin:0;background:#e7eaee;font-family:Tahoma,Arial,sans-serif;color:#18204f}
+.toolbar{position:sticky;top:0;z-index:20;display:flex;justify-content:center;gap:9px;padding:11px;background:#fff;border-bottom:1px solid #d8dce2}button{border:0;border-radius:8px;background:#128e85;color:#fff;padding:10px 16px;font:inherit;cursor:pointer}button.secondary{background:#4b5563}
+.page{width:210mm;height:297mm;margin:12px auto;position:relative;overflow:hidden;background:#fff;box-shadow:0 8px 26px #0002;print-color-adjust:exact;-webkit-print-color-adjust:exact}.background{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;z-index:0}.content{position:absolute;inset:0;z-index:1;padding:34mm 16mm 19mm}
+h1{margin:0 0 5mm;text-align:center;color:var(--teal);font-size:17pt}.section{margin:4mm 0 2mm;font-size:13pt;font-weight:bold;color:var(--navy)}table{width:100%;table-layout:fixed;border-collapse:collapse;margin-bottom:4mm;background:#ffffffe0}td{border:1.1px solid var(--navy);padding:4px 6px;font-size:10pt;vertical-align:middle;line-height:1.35}td.label{text-align:center;font-weight:bold;color:var(--teal);background:#daf4f1f5}input[type=text],textarea{width:100%;border:0;outline:0;resize:none;color:#111827;background:transparent;font:inherit;line-height:1.45;padding:0}textarea.objective{min-height:18mm}textarea.detail{min-height:32mm}textarea.program{min-height:42mm}textarea.note{min-height:28mm}
+.evidence-intro{font-size:11pt;color:#111;font-weight:bold;text-align:center;margin:3mm 0 4mm}.evidence{display:grid;grid-template-columns:1fr 1fr;gap:7mm 8mm}.e-card{border:1.1px solid var(--navy);background:#ffffffe0;overflow:hidden}.e-card h3{margin:0;padding:5px;text-align:center;background:#daf4f1f5;color:var(--teal);font-size:12pt;border-bottom:1.1px solid var(--navy)}.preview{height:72mm;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#ffffff99}.preview img{width:100%;height:100%;object-fit:contain;display:none}.placeholder{color:#64748b;font-size:10pt;text-align:center}.upload{padding:4px 6px;border-top:1px dashed #aab5c2;background:#fff}.upload input{width:100%;font-size:9pt}
+.signatures{margin-top:7mm}.signatures td{height:12mm}.signature-image,.stamp{height:25mm;display:flex;align-items:center;justify-content:center;overflow:hidden}.signature-image img,.stamp img{max-width:100%;max-height:100%;object-fit:contain;display:none}.small-upload{width:100%;font-size:8.5pt}.footer-name{margin-top:5mm;text-align:center;font-size:11pt;color:#111;font-weight:bold}
+@media print{body{background:#fff}.toolbar{display:none}.page{margin:0;box-shadow:none;page-break-after:always}.page:last-of-type{page-break-after:auto}.upload,.small-upload{display:none!important}.placeholder{display:none!important}}
+@media(max-width:800px){.page{transform:scale(.72);transform-origin:top center;margin-bottom:-81mm}.toolbar{position:static}}
+</style>
 </head>
 <body>
-  <div class="toolbar">
-    <button onclick="window.print()">حفظ التقرير PDF</button>
-    <button class="secondary" onclick="clearAll()">مسح البيانات</button>
-  </div>
-
-  <main class="page">
-    <img class="background" src="1000654586.jpg" alt="خلفية التقرير">
-    <section class="content">
-      <h1>تقرير برنامج</h1>
-      <div class="section">أولاً: معلومات عامة عن البرنامج:</div>
-      <table>
-        <tr><td class="label">اسم المشروع / البرنامج</td><td><input type="text"></td><td class="label">المجال / المسار</td><td><input type="text"></td></tr>
-        <tr><td class="label">اليوم / التاريخ</td><td><input type="text"></td><td class="label">مسؤولة التنفيذ</td><td><input type="text"></td></tr>
-        <tr><td class="label">الفئة المستهدفة</td><td><input type="text"></td><td class="label">عدد المستفيدين</td><td><input type="text"></td></tr>
-      </table>
-      <div class="section">ثانياً: أهداف المشروع / البرنامج:</div>
-      <table>
-        <tr><td class="label" style="width:20%">الهدف العام</td><td><textarea class="objective"></textarea></td></tr>
-        <tr><td class="label">الأهداف التفصيلية</td><td><textarea class="detail"></textarea></td></tr>
-      </table>
-      <div class="section">ثالثاً: وصف البرنامج:</div>
-      <table>
-        <tr><td class="label" style="width:39%">وصف البرنامج</td><td class="label" style="width:8%">من</td><td class="label" style="width:8%">إلى</td><td class="label" style="width:45%">المخرج النهائي للبرنامج</td></tr>
-        <tr><td><textarea class="program"></textarea></td><td><input type="text"></td><td><input type="text"></td><td><textarea class="program"></textarea></td></tr>
-      </table>
-      <table>
-        <tr><td class="label">إيجابيات المشروع / البرنامج</td><td class="label">فرص التحسين</td></tr>
-        <tr><td><textarea class="note"></textarea></td><td><textarea class="note"></textarea></td></tr>
-      </table>
-    </section>
-  </main>
-
-  <main class="page">
-    <img class="background" src="1000654586.jpg" alt="خلفية التقرير">
-    <section class="content">
-      <h1>شواهد الإنجاز</h1>
-      <div class="evidence-intro">صور تنفيذ البرنامج – نماذج للمطويات – شهادة الشكر للبرنامج – موافقات أولياء الأمور – آراء المشاركين بالبرنامج</div>
-      <div class="evidence">
-        <div class="e-card"><h3>الصورة الأولى</h3><div class="preview"><span id="p1" class="placeholder">اضغطي أسفل هذا المربع لاختيار الصورة الأولى</span><img id="i1" alt="الشاهد الأول"></div><div class="upload"><input type="file" accept="image/*" onchange="showImage(event,'i1','p1')"></div><div class="caption"><input type="text" placeholder="موضوع الصورة الأولى"></div></div>
-        <div class="e-card"><h3>الصورة الثانية</h3><div class="preview"><span id="p2" class="placeholder">اضغطي أسفل هذا المربع لاختيار الصورة الثانية</span><img id="i2" alt="الشاهد الثاني"></div><div class="upload"><input type="file" accept="image/*" onchange="showImage(event,'i2','p2')"></div><div class="caption"><input type="text" placeholder="موضوع الصورة الثانية"></div></div>
-        <div class="e-card"><h3>الصورة الثالثة</h3><div class="preview"><span id="p3" class="placeholder">اضغطي أسفل هذا المربع لاختيار الصورة الثالثة</span><img id="i3" alt="الشاهد الثالث"></div><div class="upload"><input type="file" accept="image/*" onchange="showImage(event,'i3','p3')"></div><div class="caption"><input type="text" placeholder="موضوع الصورة الثالثة"></div></div>
-        <div class="e-card"><h3>الصورة الرابعة</h3><div class="preview"><span id="p4" class="placeholder">اضغطي أسفل هذا المربع لاختيار الصورة الرابعة</span><img id="i4" alt="الشاهد الرابع"></div><div class="upload"><input type="file" accept="image/*" onchange="showImage(event,'i4','p4')"></div><div class="caption"><input type="text" placeholder="موضوع الصورة الرابعة"></div></div>
-      </div>
-      <table class="signatures">
-        <tr><td class="label">معدة التقرير</td><td><input type="text" value="حصه الحارثي"></td><td class="label">اسم المدرسة</td><td><input type="text" value="ثانوية سلطانة بنت عبدالعزيز"></td></tr>
-        <tr><td class="label">توقيع معدة التقرير</td><td><div class="signature-image"><span id="sp1" class="placeholder">ارفعي صورة التوقيع</span><img id="si1" alt="توقيع معدة التقرير"></div><input class="small-upload" type="file" accept="image/*" onchange="showImage(event,'si1','sp1')"></td><td class="label">توقيع مديرة المدرسة</td><td><div class="signature-image"><span id="sp2" class="placeholder">ارفعي صورة التوقيع</span><img id="si2" alt="توقيع مديرة المدرسة"></div><input class="small-upload" type="file" accept="image/*" onchange="showImage(event,'si2','sp2')"></td></tr>
-        <tr><td class="label">الختم</td><td><div class="stamp"><span id="sp3" class="placeholder">ارفعي صورة الختم</span><img id="si3" alt="ختم المدرسة"></div><input class="small-upload" type="file" accept="image/*" onchange="showImage(event,'si3','sp3')"></td><td class="label">مديرة المدرسة</td><td><input type="text" value="نسرين محمد الغامدي"></td></tr>
-      </table>
-      <div class="footer-name">رائدة النشاط الطلابي: حصه الحارثي</div>
-    </section>
-  </main>
-
+<div class="toolbar"><button onclick="window.print()">حفظ التقرير PDF</button><button class="secondary" onclick="clearAll()">مسح البيانات</button></div>
+<main class="page"><img class="background" src="1000654586.jpg" alt="خلفية التقرير"><section class="content">
+<h1>تقرير برنامج</h1><div class="section">أولاً: معلومات عامة عن البرنامج:</div>
+<table><tr><td class="label">اسم المشروع / البرنامج</td><td><input type="text"></td><td class="label">المجال / المسار</td><td><input type="text"></td></tr><tr><td class="label">اليوم / التاريخ</td><td><input type="text"></td><td class="label">مسؤولة التنفيذ</td><td><input type="text"></td></tr><tr><td class="label">الفئة المستهدفة</td><td><input type="text"></td><td class="label">عدد المستفيدين</td><td><input type="text"></td></tr></table>
+<div class="section">ثانياً: أهداف المشروع / البرنامج:</div><table><tr><td class="label" style="width:20%">الهدف العام</td><td><textarea class="objective"></textarea></td></tr><tr><td class="label">الأهداف التفصيلية</td><td><textarea class="detail"></textarea></td></tr></table>
+<div class="section">ثالثاً: وصف البرنامج:</div><table><tr><td class="label" style="width:39%">وصف البرنامج</td><td class="label" style="width:8%">من</td><td class="label" style="width:8%">إلى</td><td class="label" style="width:45%">المخرج النهائي للبرنامج</td></tr><tr><td><textarea class="program"></textarea></td><td><input type="text"></td><td><input type="text"></td><td><textarea class="program"></textarea></td></tr></table><table><tr><td class="label">إيجابيات المشروع / البرنامج</td><td class="label">فرص التحسين</td></tr><tr><td><textarea class="note"></textarea></td><td><textarea class="note"></textarea></td></tr></table>
+</section></main>
+<main class="page"><img class="background" src="1000654586.jpg" alt="خلفية التقرير"><section class="content"><h1>شواهد الإنجاز</h1><div class="evidence-intro">صور تنفيذ البرنامج – نماذج للمطويات – شهادة الشكر للبرنامج – موافقات أولياء الأمور – آراء المشاركين بالبرنامج</div><div class="evidence">
+<div class="e-card"><h3>الصورة الأولى</h3><div class="preview"><span id="p1" class="placeholder">اختاري الشاهد الأول</span><img id="i1" alt="الشاهد الأول"></div><div class="upload"><input type="file" accept="image/*" onchange="showImage(event,'i1','p1')"></div></div>
+<div class="e-card"><h3>الصورة الثانية</h3><div class="preview"><span id="p2" class="placeholder">اختاري الشاهد الثاني</span><img id="i2" alt="الشاهد الثاني"></div><div class="upload"><input type="file" accept="image/*" onchange="showImage(event,'i2','p2')"></div></div>
+<div class="e-card"><h3>الصورة الثالثة</h3><div class="preview"><span id="p3" class="placeholder">اختاري الشاهد الثالث</span><img id="i3" alt="الشاهد الثالث"></div><div class="upload"><input type="file" accept="image/*" onchange="showImage(event,'i3','p3')"></div></div>
+<div class="e-card"><h3>الصورة الرابعة</h3><div class="preview"><span id="p4" class="placeholder">اختاري الشاهد الرابع</span><img id="i4" alt="الشاهد الرابع"></div><div class="upload"><input type="file" accept="image/*" onchange="showImage(event,'i4','p4')"></div></div>
+</div>
+<table class="signatures"><tr><td class="label">معدة التقرير</td><td><input type="text" value="حصه الحارثي"></td><td class="label">اسم المدرسة</td><td><input type="text" value="ثانوية سلطانة بنت عبدالعزيز"></td></tr><tr><td class="label">توقيع معدة التقرير</td><td><div class="signature-image"><span id="sp1" class="placeholder">ارفعي صورة التوقيع</span><img id="si1" alt="توقيع معدة التقرير"></div><input class="small-upload" type="file" accept="image/*" onchange="showImage(event,'si1','sp1')"></td><td class="label">توقيع مديرة المدرسة</td><td><div class="signature-image"><span id="sp2" class="placeholder">ارفعي صورة التوقيع</span><img id="si2" alt="توقيع مديرة المدرسة"></div><input class="small-upload" type="file" accept="image/*" onchange="showImage(event,'si2','sp2')"></td></tr><tr><td class="label">الختم</td><td><div class="stamp"><span id="sp3" class="placeholder">ارفعي صورة الختم</span><img id="si3" alt="ختم المدرسة"></div><input class="small-upload" type="file" accept="image/*" onchange="showImage(event,'si3','sp3')"></td><td class="label">مديرة المدرسة</td><td><input type="text" value="نسرين محمد الغامدي"></td></tr></table><div class="footer-name">رائدة النشاط الطلابي: حصه الحارثي</div>
+</section></main>
 <script>
-  function showImage(event, imageId, placeholderId) {
-    const file = event.target.files && event.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      const image = document.getElementById(imageId);
-      const placeholder = document.getElementById(placeholderId);
-      image.src = e.target.result;
-      image.style.display = 'block';
-      placeholder.style.display = 'none';
-    };
-    reader.readAsDataURL(file);
-  }
-  function clearAll() {
-    document.querySelectorAll('input[type=text], textarea').forEach(function(el) { el.value = el.defaultValue || ''; });
-    document.querySelectorAll('input[type=file]').forEach(function(el) { el.value = ''; });
-    document.querySelectorAll('img[id]').forEach(function(img) { img.src = ''; img.style.display = 'none'; });
-    document.querySelectorAll('.placeholder').forEach(function(el) { el.style.display = 'block'; });
-  }
+function showImage(e,imgId,pid){const f=e.target.files&&e.target.files[0];if(!f)return;const r=new FileReader();r.onload=function(x){const i=document.getElementById(imgId),p=document.getElementById(pid);i.src=x.target.result;i.style.display='block';p.style.display='none'};r.readAsDataURL(f)}
+function clearAll(){document.querySelectorAll('input[type=text],textarea').forEach(x=>x.value=x.defaultValue||'');document.querySelectorAll('input[type=file]').forEach(x=>x.value='');document.querySelectorAll('img[id]').forEach(i=>{i.src='';i.style.display='none'});document.querySelectorAll('.placeholder').forEach(x=>x.style.display='block')}
 </script>
 </body>
 </html>
